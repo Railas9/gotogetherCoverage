@@ -35,7 +35,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      
+          
+      - name: install lcov     
+        run : sudo apt-get install lcov
       - name: Gen test coverage
         run : genhtml coverage/lcov.info -o coverage/html
       #- uses: codecov/codecov-action@v2
