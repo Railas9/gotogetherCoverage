@@ -37,7 +37,7 @@ jobs:
           echo test, and deploy your project.
           
       - name: install lcov     
-        run : sudo apt-get install lcov
+        run : sudo apt-get install lcov -y
       - name : test coverage
         run : flutter test --coverage
       - name: Gen test coverage
