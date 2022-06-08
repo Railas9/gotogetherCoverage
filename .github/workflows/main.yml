@@ -35,8 +35,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
-      - uses: codecov/codecov-action@v2
+      
+      - name: Gen test coverage
+        run : genhtml coverage/lcov.info -o coverage/html
+      #- uses: codecov/codecov-action@v2
+        
         #with:
             #token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
             #files: ./coverage1.xml,./coverage2.xml # optional
