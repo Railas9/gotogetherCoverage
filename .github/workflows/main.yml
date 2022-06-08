@@ -38,6 +38,8 @@ jobs:
           
       - name: install lcov     
         run : sudo apt-get install lcov
+      - name : test coverage
+        run : flutter test --coverage
       - name: Gen test coverage
         run : genhtml coverage/lcov.info -o coverage/html
       #- uses: codecov/codecov-action@v2
